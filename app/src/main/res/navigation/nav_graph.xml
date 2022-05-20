@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/countryListFragment">
+    <fragment
+        android:id="@+id/countryListFragment"
+        android:name="com.example.finalexam.fragments.CountryListFragment"
+        android:label="CountryListFragment" >
+        <action
+            android:id="@+id/action_countryListFragment_to_countryStatsFragment"
+            app:destination="@id/countryStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryStatsFragment"
+        android:name="com.example.finalexam.fragments.CountryStatsFragment"
+        android:label="CountryStatsFragment" >
+        <argument
+            android:name="slug"
+            app:argType="string" />
+    </fragment>
+</navigation>
